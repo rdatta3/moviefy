@@ -9,7 +9,7 @@ function NavbarComponent(props) {
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container fluid>
         <Navbar.Brand href="/">
-        <img src='https://png.pngtree.com/element_our/png/20181227/movie-icon-which-is-designed-for-all-application-purpose-new-png_287896.jpg' className="nav-logo"/>
+        <img src='https://png.pngtree.com/element_our/png/20181227/movie-icon-which-is-designed-for-all-application-purpose-new-png_287896.jpg' className="nav-logo" alt="Movie posters"/>
         Moviefy
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />

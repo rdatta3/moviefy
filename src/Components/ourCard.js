@@ -1,6 +1,6 @@
 import React from "react";
  import { Card, Col } from "react-bootstrap";
-
+import { Link } from 'react-router-dom';
  const OurCard = (props) => {
      const { movieItem } = props;
      let src=movieItem?.primaryImage?.url;
@@ -9,16 +9,18 @@ import React from "react";
      }
      return (
          <Col>
-             <div>{
-                <Card>
-                <Card.Img variant="top" src={src} className="cardImage" />
+             <div className="card-container">{
+             <Link to={`/movies/${movieItem.id}`} >
+                <Card >
+                <Card.Img variant="top" src={src} className="cardImage"/>
                  <Card.Body>
                   <Card.Title>{movieItem.titleText.text}</Card.Title>
                    <Card.Text>
                      {movieItem?.primaryImage?.caption?.plainText}
-                     </Card.Text>
-                   </Card.Body>
-             </Card>
+                   </Card.Text>
+                  </Card.Body>
+                </Card>
+             </Link>
 
              }
 

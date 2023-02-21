@@ -14,12 +14,47 @@
     height:3rem;
     width:3rem;
 }
+.card-container{
+    overflow:hidden;
+}
+.card-container a{
+    color:black;
+}
 .cardImage{
     height:500px;
-    filter:blur(1px);
-     transition : 1s ease-in-out;
+    transition: all 0.6s ease 0.2s;
+      width: 100%;
 }
 .cardImage:hover{
-    filter:blur(0);
-     transition : 1s ease-in-out;
+  transform: scale(1.25);
+}
+
+.not-found{
+    padding:250px;
+    font-size:80px;
+   font-family: Baskerville;
+}
+.movie-detail{
+    margin:20px;
+    background-color :  #f0ebd1;
+}
+.movie-detail img{
+    height:1000px;
+    width:1000px;
+    display:cover;
+    border: 5px solid black
+}
+.movie-detail h1{
+    font: 15px Arial, sans-serif;
+    font-size :80px;
+    padding:20px;
+}
+.movie-detail h3{
+    font: italic small-caps bold 12px/30px Georgia, serif;
+    font-size:15px;
+    padding:30px;
+}
+
+.body-container{
+    padding:20px;
 }

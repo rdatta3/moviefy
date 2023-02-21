@@ -4,16 +4,17 @@ import Row from "react-bootstrap/Row";
 import OurCard from "./ourCard";
 
 const BodyContent=(props)=>{
-    const {searchword} =props;
+    const {searchword} = props;
     const [movies,setMovies]=useState([]);
     useEffect(()=>{
      const headers ={
-                    'X-RapidAPI-Key': 'a3d78a363cmsh4c218d554d6d81cp1d52c6jsnad39d01b794a',
-                    'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com'
+                        'X-RapidAPI-Key': 'a3d78a363cmsh4c218d554d6d81cp1d52c6jsnad39d01b794a',
+                           'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com'
                   }
+
         axios
         .get(
-            `https://moviesdatabase.p.rapidapi.com/titles/search/keyword/${searchword}`,{headers}
+            `https://moviesdatabase.p.rapidapi.com/titles/search/title/${searchword}`,{headers}
         )
         .then((res)=>{
             setMovies([res.data.results]);
@@ -25,7 +26,12 @@ const BodyContent=(props)=>{
     },[searchword]);
 
     return(
-        <div className="body-container">
+
+        <div>
+             <div className="Heading">
+               Movies for every mood!!!!
+             </div>
+            <div className="body-container">
            <Row xs={1} md={3} className="g-4">
             {
 
@@ -38,6 +44,7 @@ const BodyContent=(props)=>{
             ))
             }
             </Row>
+            </div>
         </div>
     );
 }
